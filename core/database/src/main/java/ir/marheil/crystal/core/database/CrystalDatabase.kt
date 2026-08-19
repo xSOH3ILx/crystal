@@ -16,6 +16,7 @@ import ir.marheil.crystal.core.database.entity.ChequeEntity
 import ir.marheil.crystal.core.database.entity.FinancialGoalEntity
 import ir.marheil.crystal.core.database.entity.LiabilityEntity
 import ir.marheil.crystal.core.database.entity.NotificationAlertEntity
+import ir.marheil.crystal.core.database.entity.TransactionEntity
 
 @Database(
     entities = [
