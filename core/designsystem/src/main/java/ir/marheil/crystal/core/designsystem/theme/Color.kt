@@ -14,6 +14,10 @@ val AccentPurple = Color(0xFF8B5CF6)
 val DangerRed = Color(0xFFEF4444)
 val WarningAmber = Color(0xFFF59E0B)
 
+val ProfitGreen = Color(0xFF10B981)
+val LossRed = Color(0xFFEF4444)
+val DarkCardBorder = Color(0x26FFFFFF)
+
 val TextPrimary = Color(0xFFF8FAFC)
 val TextSecondary = Color(0xFF94A3B8)
 val TextMuted = Color(0xFF64748B)

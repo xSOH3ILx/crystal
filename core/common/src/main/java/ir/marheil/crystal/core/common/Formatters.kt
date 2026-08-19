@@ -17,3 +17,6 @@ object Formatters {
         }
     }
 }
+
+fun formatAmount(amount: Double): String = Formatters.formatMoney(amount)
+

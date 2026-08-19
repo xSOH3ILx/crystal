@@ -12,7 +12,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import ir.marheil.crystal.core.designsystem.components.GlassCard
+import ir.marheil.crystal.core.designsystem.component.GlassCard
 import ir.marheil.crystal.core.designsystem.theme.*
 
 @OptIn(ExperimentalMaterial3Api::class)

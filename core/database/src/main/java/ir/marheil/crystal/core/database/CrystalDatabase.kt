@@ -30,7 +30,7 @@ import ir.marheil.crystal.core.database.entity.NotificationAlertEntity
         NotificationAlertEntity::class
     ],
     version = 1,
-    exportSchema = true
+    exportSchema = false
 )
 abstract class CrystalDatabase : RoomDatabase() {
     abstract fun assetDao(): AssetDao

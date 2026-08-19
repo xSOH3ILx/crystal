@@ -144,7 +144,7 @@ fun HubSelectorBar(
                     .padding(4.dp),
                 horizontalArrangement = Arrangement.SpaceEvenly
             ) {
-                AppHub.values().forEach { hub ->
+                AppHub.entries.forEach { hub ->
                     val isSelected = hub == selectedHub
                     Box(
                         modifier = Modifier

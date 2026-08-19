@@ -24,16 +24,17 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-          cache: gradle
 
-      - name: Grant Execute Permission for Gradle
-        run: chmod +x gradlew || true
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: 8.11.1
 
       - name: Run KtLint & Detekt
-        run: ./gradlew ktlintCheck detekt --continue || true
+        run: gradle ktlintCheck detekt --continue || true
 
       - name: Run Unit Tests
-        run: ./gradlew testDebugUnitTest --continue
+        run: gradle testDebugUnitTest --continue
 
   build-artifacts:
     name: Build APK & Bundle (AAB)
@@ -51,7 +52,11 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-          cache: gradle
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: 8.11.1
 
       - name: Extract Dynamic Git Version
         id: versioning
@@ -63,10 +68,10 @@ jobs:
           echo "Building Crystal version: $TAG_NAME (code: $COMMIT_COUNT)"
 
       - name: Build Debug & Release APK
-        run: ./gradlew assembleDebug assembleRelease
+        run: gradle assembleDebug assembleRelease
 
       - name: Build Android App Bundle (AAB)
-        run: ./gradlew bundleRelease
+        run: gradle bundleRelease
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4

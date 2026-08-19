@@ -17,7 +17,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import ir.marheil.crystal.core.common.formatAmount
-import ir.marheil.crystal.core.designsystem.components.GlassCard
+import ir.marheil.crystal.core.designsystem.component.GlassCard
 import ir.marheil.crystal.core.designsystem.theme.*
 
 data class CashFlowItemMock(
@@ -105,7 +105,7 @@ fun CashFlowScreen(
                                 )
                             }
                         }
-                        Divider(color = DarkCardBorder)
+                        HorizontalDivider(color = DarkCardBorder)
                         Row(
                             modifier = Modifier.fillMaxWidth(),
                             horizontalArrangement = Arrangement.SpaceBetween,
